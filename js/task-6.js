@@ -1,5 +1,6 @@
 function changInput() {
-  addClass(input.value.length >= length ? true : false);
+  const length = input.getAttribute('data-length');
+  addClass(input.value.length == Number(length) ? true : false);
 }
 function addClass(passed) {
   if (passed) {
@@ -11,5 +12,5 @@ function addClass(passed) {
   }
 }
 const input = document.querySelector('#validation-input');
-const length = input.getAttribute('data-length');
+
 input.addEventListener('blur', changInput);
