@@ -1,6 +1,6 @@
 function changInput() {
   const length = input.getAttribute('data-length');
-  addClass(input.value.length == Number(length) ? true : false);
+  addClass(input.value.length === Number(length) ? true : false);
 }
 function addClass(passed) {
   if (passed) {
